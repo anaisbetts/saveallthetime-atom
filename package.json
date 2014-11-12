@@ -1,11 +1,8 @@
 {
   "name": "saveallthetime",
   "main": "./lib/saveallthetime-atom",
-  "version": "0.0.1",
-  "description": "A short description of your package",
-  "activationCommands": {
-    "atom-workspace": "saveallthetime-atom:toggle"
-  },
+  "version": "0.1.0",
+  "description": "Automatically saves your document if your project uses Git",
   "repository": "https://github.com/atom/saveallthetime-atom",
   "license": "MIT",
   "engines": {
