@@ -1,8 +1,9 @@
 # Save All The Time
 
-Sometimes when you work with Atom and actually do stuff. It doesn't save the
-things you do. And it can be hard to tell that you're in that state. So then you
-commit your code and you miss out on the unsaved changes.
+Sometimes when you work with Atom and actually do stuff, you forget to save
+your work, and it can be hard to tell that you're in that state. So then you
+commit your code and you miss out on the unsaved changes. Or you run the
+build, then don't see anything update.
 
 It makes you want to rage!
 
