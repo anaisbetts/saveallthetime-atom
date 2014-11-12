@@ -1,7 +1,7 @@
 {
   "name": "saveallthetime",
   "main": "./lib/saveallthetime-atom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatically saves your document if your project uses Git",
   "repository": "https://github.com/paulcbetts/saveallthetime-atom",
   "license": "MIT",
