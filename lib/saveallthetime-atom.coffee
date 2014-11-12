@@ -2,11 +2,11 @@ rx = require 'rx'
 
 observeTextEditorsObs = (workspace) ->
   rx.Observable.create (subj) ->
-    return workspace.observeTextEditors (e) -> subj.onNext(e)
+    workspace.observeTextEditors (e) -> subj.onNext(e)
 
 fromAtomEvent = (target, eventName) ->
   rx.Observable.create (subj) ->
-    return target[eventName] (args...) -> subj.onNext(args)
+    target[eventName] (args...) -> subj.onNext(args)
 
 module.exports =
   enableAutoSave: ->
@@ -15,14 +15,13 @@ module.exports =
       .mergeAll()
       .where (editor) -> editor.isModified() and editor.getPath()?
       .throttle 2000
-      .subscribe (editor) ->
-        editor.save()
+      .subscribe (editor) -> editor.save()
 
   activate: (state) ->
     @disp ?= new rx.SerialDisposable()
 
     unless atom.project.getRepo()
-      @disp.setDisposable(rx.Disposable.empty)
+      @disp.setDisposable rx.Disposable.empty
       return
 
     enabled = true
