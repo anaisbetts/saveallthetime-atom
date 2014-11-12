@@ -6,7 +6,7 @@ commit your code and you miss out on the unsaved changes.
 
 It makes you want to rage!
 
-![](http://f.cl.ly/items/1M1F1W0z1N3E033k111c/fuuuu-rage-guy1.png)
+![](http://f.cl.ly/items/1M1F1W0z1N3E033k111c/fuuuu-rage-guy1.png#png)
 
 Until now!
 
