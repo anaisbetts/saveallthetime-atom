@@ -1,7 +1,7 @@
 {
-  "name": "saveallthetime-atom",
+  "name": "saveallthetime",
   "main": "./lib/saveallthetime-atom",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A short description of your package",
   "activationCommands": {
     "atom-workspace": "saveallthetime-atom:toggle"
@@ -12,5 +12,6 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "rx": "^2.3.14"
   }
 }
