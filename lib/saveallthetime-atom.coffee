@@ -13,8 +13,8 @@ module.exports =
     observeTextEditorsObs(atom.workspace)
       .map (editor) -> fromAtomEvent(editor, 'onDidStopChanging').map(-> editor)
       .mergeAll()
-      .throttle 750
       .where (editor) -> editor.isModified() and editor.getPath()?
+      .throttle 2000
       .subscribe (editor) ->
         editor.save()
 
