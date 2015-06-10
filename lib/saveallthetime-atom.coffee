@@ -20,12 +20,12 @@ module.exports =
   activate: (state) ->
     @disp ?= new rx.SerialDisposable()
 
-    unless atom.project.getRepo()
+    unless atom.project.getRepositories().length
       @disp.setDisposable rx.Disposable.empty
       return
 
     enabled = true
-    atom.workspaceView.command 'saveallthetime:toggle-auto-save', =>
+    atom.commands.add 'atom-workspace', 'saveallthetime:toggle-auto-save': =>
       newDisp = if enabled then rx.Disposable.empty else @enableAutoSave()
       @disp.setDisposable newDisp
       enabled = not enabled
